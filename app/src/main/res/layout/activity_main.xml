@@ -1,0 +1,255 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo"
+    android:padding="16dp">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="#1243A6" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="12dp"
+            android:background="#FEC526"
+            android:layout_marginBottom="30dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Registro"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#0E2159"
+            android:layout_marginBottom="10dp" />
+
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/toribio2"
+            android:layout_marginBottom="20dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="12dp"
+            android:background="#0E2159"
+            android:layout_marginBottom="30dp" />
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:elevation="4dp"
+                android:orientation="vertical"
+                android:layout_margin="8dp"
+                android:layout_gravity="center">
+
+                <EditText
+                    android:id="@+id/etNombre"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Nombre completo"
+                    android:padding="12dp"
+                    android:layout_marginBottom="8dp"
+                    android:textColor="@color/black"/>
+
+                <EditText
+                    android:id="@+id/etEdad"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Edad"
+                    android:padding="12dp"
+                    android:inputType="number"
+                    android:layout_marginBottom="8dp"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Selecciona tu género:"
+                    android:textSize="12sp"/>
+
+                <RadioGroup
+                    android:id="@+id/radioGroupGenero"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center_horizontal">
+
+                    <RadioButton
+                        android:id="@+id/radio_masculino"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:text="Masculino" />
+
+                    <RadioButton
+                        android:id="@+id/radio_femenino"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:text="Femenino" />
+                </RadioGroup>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Selecciona tu escuela:"
+                    android:textSize="12sp"
+                    android:layout_marginTop="8dp"/>
+
+                <Spinner
+                    android:id="@+id/spinnerEscuela"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Selecciona tu carrera:"
+                    android:textSize="12sp"
+                    android:layout_marginTop="8dp"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_gravity="center_vertical">
+
+                    <CheckBox
+                        android:id="@+id/check_sistemas"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:text="Ingeniería en Sistemas Computacionales" />
+
+                    <CheckBox
+                        android:id="@+id/check_civil"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:text="Ingeniería Civil" />
+
+                    <CheckBox
+                        android:id="@+id/check_industrial"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:text="Ingeniería Industrial" />
+
+                    <CheckBox
+                        android:id="@+id/check_robotica"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:text="Ingeniería Robótica" />
+
+                    <CheckBox
+                        android:id="@+id/check_tecnologias"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:text="Ingeniería en Tecnologías y Manufactura" />
+
+                    <CheckBox
+                        android:id="@+id/check_electronica"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:text="Ingeniería en Electrónica y Telecomunicaciones" />
+
+                    <CheckBox
+                        android:id="@+id/check_gestionEm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:text="Licenciatura en Gestión Empresarial" />
+
+                    <CheckBox
+                        android:id="@+id/check_negocios"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:text="Licenciatura en Negocios Internacionales" />
+
+                    <CheckBox
+                        android:id="@+id/check_financiera"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:text="Ingeniería Financiera" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Selecciona otras opciones:"
+                        android:textSize="12sp" />
+
+                    <EditText
+                        android:id="@+id/etOtro"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="Otro"
+                        android:padding="12dp"
+                        android:layout_marginBottom="8dp"
+                        android:textColor="@color/black"/>
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/etCorreo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Correo electrónico"
+                    android:padding="12dp"
+                    android:inputType="textEmailAddress"
+                    android:layout_marginBottom="16dp"
+                    android:textColor="@color/black"/>
+
+                <EditText
+                    android:id="@+id/etTelefono"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Teléfono (10 dígitos)"
+                    android:padding="12dp"
+                    android:inputType="phone"
+                    android:maxLength="10"
+                    android:layout_marginBottom="16dp"
+                    android:textColor="@color/black"/>
+
+                <Button
+                    android:id="@+id/btnEnviar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Enviar"
+                    android:textSize="20dp"
+                    android:textColor="#f2f2f2"
+                    android:backgroundTint="@color/rosaupt"
+                    android:padding="12dp"/>
+
+            </LinearLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="#FEC526"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="#1243A6" />
+
+    </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
