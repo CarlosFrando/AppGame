@@ -1,5 +1,6 @@
 package com.example.appgame;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.StrictMode;
 import android.view.View;
@@ -86,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
 
                 String carrerasString = android.text.TextUtils.join(",", carreras);
 
-                // Enviar datos a servidor
+                // Datos para POST
                 String postData = "nombre=" + URLEncoder.encode(nombre, "UTF-8") +
                         "&edad=" + URLEncoder.encode(edad, "UTF-8") +
                         "&genero=" + URLEncoder.encode(genero, "UTF-8") +
@@ -95,11 +96,15 @@ public class MainActivity extends AppCompatActivity {
                         "&correo=" + URLEncoder.encode(correo, "UTF-8") +
                         "&telefono=" + URLEncoder.encode(telefono, "UTF-8");
 
-                URL url = new URL("http://192.168.56.1/guardar_datos.php"); // IP de localhost desde el emulador
+                URL url = new URL("http://10.0.2.2/registro.php"); // 10.0.2.2 = localhost desde emulador
                 HttpURLConnection conn = (HttpURLConnection) url.openConnection();
                 conn.setRequestMethod("POST");
                 conn.setDoOutput(true);
-                conn.getOutputStream().write(postData.getBytes());
+
+                OutputStream os = conn.getOutputStream();
+                os.write(postData.getBytes());
+                os.flush();
+                os.close();
 
                 int responseCode = conn.getResponseCode();
                 if (responseCode == HttpURLConnection.HTTP_OK) {
