@@ -1,7 +1,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fondo"
+    android:background="@drawable/fondoregistro"
     android:padding="16dp">
     <ScrollView
         android:layout_width="match_parent"
@@ -21,21 +21,12 @@
             android:layout_width="match_parent"
             android:layout_height="12dp"
             android:background="#FEC526"
-            android:layout_marginBottom="30dp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Registro"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            android:textColor="#0E2159"
-            android:layout_marginBottom="10dp" />
+            android:layout_marginBottom="20dp" />
 
         <ImageView
-            android:layout_width="120dp"
-            android:layout_height="120dp"
-            android:src="@drawable/toribio2"
+            android:layout_width="wrap_content"
+            android:layout_height="180dp"
+            android:src="@drawable/registro"
             android:layout_marginBottom="20dp" />
 
         <View
@@ -49,7 +40,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@android:color/white"
+                android:background="@android:color/darker_gray"
                 android:elevation="4dp"
                 android:orientation="vertical"
                 android:layout_margin="8dp"

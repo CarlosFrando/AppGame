@@ -1,0 +1,123 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondomenu"
+    android:layout_marginTop="27dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:padding="16dp">
+
+            <!-- Barras superiores -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="#1243A6" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="12dp"
+                android:background="#FEC526"
+                android:layout_marginBottom="30dp" />
+
+            <!-- Título -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Menú"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:textColor="#0E2159"
+                android:layout_marginBottom="10dp" />
+
+            <!-- Imagen principal -->
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="150dp"
+                android:src="@drawable/bienvenido"
+                android:layout_marginBottom="20dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="12dp"
+                android:background="#0E2159"
+                android:layout_marginBottom="20dp" />
+
+            <!-- Grid de botones de juego -->
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="2"
+                android:orientation="horizontal"
+                android:alignmentMode="alignMargins"
+                android:rowOrderPreserved="false"
+                android:useDefaultMargins="true">
+
+                <!-- Estilo común aplicado a cada botón -->
+                <ImageButton
+                    android:id="@+id/btnGato"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/gato"
+                    android:scaleType="centerInside"
+                    android:background="?android:selectableItemBackgroundBorderless"
+
+                    android:elevation="6dp"
+                    android:layout_gravity="center" />
+
+                <ImageButton
+                    android:id="@+id/btnPuzzle"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/puzzle"
+                    android:scaleType="centerInside"
+                    android:background="?android:selectableItemBackgroundBorderless"
+
+                    android:elevation="6dp"
+                    android:layout_gravity="center" />
+
+                <ImageButton
+                    android:id="@+id/btnAhorcado"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/ahorcado"
+                    android:scaleType="centerInside"
+                    android:background="?android:selectableItemBackgroundBorderless"
+
+                    android:elevation="6dp"
+                    android:layout_gravity="center" />
+
+                <ImageButton
+                    android:id="@+id/btnMemo"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/memorama"
+                    android:scaleType="centerInside"
+                    android:background="?android:selectableItemBackgroundBorderless"
+
+                    android:elevation="6dp"
+                    android:layout_gravity="center" />
+            </GridLayout>
+
+            <!-- Barras inferiores -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="#FEC526"
+                android:layout_marginTop="30dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="#1243A6" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
