@@ -1,0 +1,10 @@
+CREATE TABLE registros (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(100),
+    edad INT,
+    genero VARCHAR(20),
+    escuela VARCHAR(100),
+    carreras TEXT,
+    correo VARCHAR(100),
+    telefono VARCHAR(20)
+);
