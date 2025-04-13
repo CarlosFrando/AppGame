@@ -21,8 +21,28 @@
         <activity android:name=".MemoramaActivity" android:exported="false" />
         <activity android:name=".AhorcadoActivity" android:exported="false" />
         <activity android:name=".PuzzleActivity" android:exported="false" />
-        <activity android:name=".GatoActivity" android:exported="false" />
+        <activity android:name=".GatoActivity" android:screenOrientation="portrait" android:exported="false" />
         <activity android:name=".MainActivity2" android:exported="false" />
+        <activity
+            android:screenOrientation="portrait"
+            android:name=".MainActivity5"
+            android:exported="false"
+            tools:ignore="DiscouragedApi" />
+        <activity
+            android:screenOrientation="portrait"
+            android:name=".MainActivity4"
+            android:exported="false"
+            tools:ignore="DiscouragedApi" />
+        <activity
+            android:screenOrientation="portrait"
+            android:name=".MainActivity3"
+            android:exported="false"
+            tools:ignore="DiscouragedApi" />
+        <activity
+            android:screenOrientation="portrait"
+            android:name=".ModoJuego"
+            android:exported="false"
+            tools:ignore="DiscouragedApi" />
 
 
         <activity android:name=".MainActivity" android:exported="true">

@@ -1,0 +1,157 @@
+<LinearLayout
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/fondojuego"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="15dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:id="@+id/tvPlayer1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Jugador 1"
+                android:textColor="@color/came"
+
+                android:textSize="20sp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/sports_world_regular"/>
+
+            <TextView
+                android:id="@+id/tvPlayer2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Jugador 2"
+                android:textColor="@color/came"
+                android:textSize="20sp"
+                android:fontFamily="@font/sports_world_regular"/>
+        </LinearLayout>
+
+        <!-- Temporizadores -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:id="@+id/tvTimer1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00:00"
+                android:textColor="@color/came"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/montserrat_bold"/>
+
+            <TextView
+                android:id="@+id/tvTimer2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00:00"
+                android:textStyle="bold"
+                android:textColor="@color/came"
+                android:textSize="20sp"
+                android:fontFamily="@font/montserrat_bold"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/turn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Turno de Jugador 1"
+            android:textColor="@color/came"
+            android:textStyle="bold"
+            android:textSize="24sp"
+            android:gravity="center"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="@font/montserrat_bold"/>
+
+        <LinearLayout
+            style="@style/row">
+
+            <ImageButton
+                android:id="@+id/a1"
+                style="@style/column"/>
+
+            <View
+                style="@style/verticalLine"/>
+
+            <ImageButton
+                android:id="@+id/a2"
+                style="@style/column"/>
+
+            <View
+                style="@style/verticalLine"/>
+
+            <ImageButton
+                android:id="@+id/a3"
+                style="@style/column"/>
+        </LinearLayout>
+
+        <View
+            style="@style/horizontalLine"/>
+
+        <LinearLayout
+            style="@style/row">
+
+            <ImageButton
+                android:id="@+id/b1"
+                style="@style/column"/>
+
+            <View
+                style="@style/verticalLine"/>
+
+            <ImageButton
+                android:id="@+id/b2"
+                style="@style/column" />
+
+            <View
+                style="@style/verticalLine"/>
+
+            <ImageButton
+                android:id="@+id/b3"
+                style="@style/column"
+                />
+        </LinearLayout>
+
+        <View
+            style="@style/horizontalLine"/>
+
+        <LinearLayout
+            style="@style/row">
+
+            <ImageButton
+                android:id="@+id/c1"
+                style="@style/column"/>
+
+            <View
+                style="@style/verticalLine"/>
+
+            <ImageButton
+                android:id="@+id/c2"
+                style="@style/column"/>
+
+            <View
+                style="@style/verticalLine"/>
+
+            <ImageButton
+                android:id="@+id/c3"
+                style="@style/column"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

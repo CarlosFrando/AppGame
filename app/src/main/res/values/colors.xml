@@ -3,4 +3,11 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="rosaupt">#1243a6</color>
+    <color name="blue">#0e2159</color>
+    <color name="golden">#fec526</color>
+    <color name="gris">#bcbcbc</color>
+    <color name="grisOscuro">#b2b2b2</color>
+    <color name="salmon">#F5DEB3</color>
+    <color name="came">#870f54</color>
+    <color name="semiTransparente">#4d000000</color>
 </resources>

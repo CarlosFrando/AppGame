@@ -1,0 +1,76 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/fondo"
+    android:padding="16dp">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Selecciona un modo de juego"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:layout_marginBottom="24dp"
+        android:textStyle="bold"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
+            <ImageButton
+                android:id="@+id/btn_vs_player"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/jvsj"
+                android:background="@android:color/transparent"
+                android:contentDescription="Jugador vs Jugador"
+                android:scaleType="centerCrop"
+                android:padding="8dp"
+                android:layout_margin="10dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Jugador vs Jugador"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginTop="4dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
+        <!-- Imagen para Jugador vs IA -->
+        <ImageButton
+            android:id="@+id/btn_vs_ai"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/jvsia"
+            android:background="@android:color/transparent"
+            android:contentDescription="Jugador vs IA"
+            android:scaleType="centerCrop"
+            android:padding="8dp"
+            android:layout_margin="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jugador vs IA"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginTop="4dp" />
+    </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

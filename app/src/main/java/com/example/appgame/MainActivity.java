@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // Esto es para permitir red en el hilo principal (solo para pruebas)
+        /*// Esto es para permitir red en el hilo principal (solo para pruebas)
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
         StrictMode.setThreadPolicy(policy);
 
@@ -49,18 +49,20 @@ public class MainActivity extends AppCompatActivity {
         checkElectronica = findViewById(R.id.check_electronica);
         checkGestionEm = findViewById(R.id.check_gestionEm);
         checkNegocios = findViewById(R.id.check_negocios);
-        checkFinanciera = findViewById(R.id.check_financiera);
+        checkFinanciera = findViewById(R.id.check_financiera);*/
 
         btnEnviar = findViewById(R.id.btnEnviar);
+/*
 
         // Spinner de ejemplo
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                 R.array.escuelas_array, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerEscuela.setAdapter(adapter);
+*/
 
         btnEnviar.setOnClickListener(view -> {
-            try {
+            /*try {
                 String nombre = etNombre.getText().toString();
                 String edad = etEdad.getText().toString();
                 String correo = etCorreo.getText().toString();
@@ -116,7 +118,9 @@ public class MainActivity extends AppCompatActivity {
             } catch (Exception e) {
                 e.printStackTrace();
                 Toast.makeText(MainActivity.this, "Error: " + e.getMessage(), Toast.LENGTH_LONG).show();
-            }
+            }*/
+            Intent intent = new Intent(this, MainActivity2.class);
+            startActivity(intent);
         });
     }
 }

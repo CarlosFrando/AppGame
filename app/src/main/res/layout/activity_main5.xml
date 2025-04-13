@@ -1,0 +1,91 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondocolores"
+    android:padding="16dp"
+    android:orientation="vertical"
+    android:gravity="center_horizontal">
+
+    <!-- Imagen decorativa en la parte superior -->
+    <ImageView
+        android:id="@+id/imagenToro"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="-20dp"
+        android:src="@drawable/fondoreglas"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
+        android:layout_gravity="center_horizontal"/>
+
+    <!-- Contenedor principal de reglas -->
+    <LinearLayout
+        android:id="@+id/contenedorReglas"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:background="@drawable/fondo_reglas"
+        android:padding="24dp"
+        android:gravity="center_horizontal">
+
+        <!-- Título -->
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reglas del Juego"
+            android:textColor="@color/golden"
+            android:textSize="28sp"
+            android:textAlignment="center"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="@font/sports_world_regular"
+            android:layout_gravity="center_horizontal"/>
+
+        <!-- Contenido desplazable -->
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:fillViewport="true"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:id="@+id/tvRules"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="1. El juego es para dos jugadores: X y O.\n\n2. Los jugadores alternan turnos para colocar su símbolo en una celda vacía.\n\n3. El objetivo es formar una línea horizontal, vertical o diagonal con tres símbolos iguales.\n\n4. Cada jugador tiene un tiempo límite de 30 segundos por turno. Si el tiempo se agota, el turno pasa al otro jugador.\n\n5. En el modo de un jugador, compites contra la IA. La IA intentará bloquear tus movimientos y ganar el juego."
+                android:textColor="@color/came"
+                android:textSize="14sp"
+                android:fontFamily="@font/montserrat_regular"
+                android:textStyle="bold"
+                android:lineSpacingExtra="4dp"
+                android:paddingBottom="8dp"/>
+        </ScrollView>
+
+        <!-- Checkbox -->
+        <CheckBox
+            android:id="@+id/cbSeen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No volver a mostrar"
+            android:textColor="@color/came"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"/>
+
+        <!-- Botón dentro del contenedor -->
+        <ImageButton
+            android:id="@+id/btnContinue"
+            android:layout_width="190dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@android:color/transparent"
+            android:contentDescription="continuar"
+            android:scaleType="fitCenter"
+            android:src="@drawable/continuar"
+            android:adjustViewBounds="true"
+            android:layout_margin="10dp"/>
+    </LinearLayout>
+</LinearLayout>

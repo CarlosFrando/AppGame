@@ -16,7 +16,7 @@ public class MainActivity2 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main); // Asegúrate de que este sea el nombre correcto del layout
+        setContentView(R.layout.activity_main2); // Asegúrate de que este sea el nombre correcto del layout
 
         // Referencias a los botones
         btnGato = findViewById(R.id.btnGato);

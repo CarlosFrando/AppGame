@@ -1,0 +1,92 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/fondo"
+    android:gravity="center_horizontal">
+
+    <!-- Fixed title at the top -->
+    <TextView
+        style="@style/tv"
+        android:text="DATOS DE LOS JUGADORES"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="16dp"
+        android:textStyle="bold"
+        android:fontFamily="@font/montserrat_bold"/>
+
+    <!-- Main content container centered vertically -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <!-- Player input container -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="16dp">
+
+            <!-- Player 1 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="24dp"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    style="@style/tv"
+                    android:text="JUGADOR 1:"/>
+
+                <EditText
+                    style="@style/et"
+                    android:hint="Nombre"
+                    android:id="@+id/etNombre1"
+                    android:imeOptions="actionNext"
+                    android:importantForAutofill="auto"
+                    android:autofillHints="username"/>
+            </LinearLayout>
+
+            <!-- Player 2 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/containerJugador2"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    style="@style/tv"
+                    android:text="JUGADOR 2:"
+                    android:id="@+id/tvNombre2"/>
+
+                <EditText
+                    style="@style/et"
+                    android:hint="Nombre"
+                    android:id="@+id/etNombre2"
+                    android:imeOptions="actionDone"
+                    android:importantForAutofill="auto"
+                    android:autofillHints="username" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Play button fixed at the bottom -->
+    <ImageButton
+        android:id="@+id/btnJugar"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/play"
+        android:background="@android:color/transparent"
+        android:contentDescription="Jugar"
+        android:elevation="8dp"
+        android:scaleType="fitCenter"/>
+</LinearLayout>
