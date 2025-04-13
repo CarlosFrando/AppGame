@@ -35,7 +35,7 @@ public class MainActivity2 extends AppCompatActivity {
         btnPuzzle.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity2.this, PuzzleActivity.class));
+                startActivity(new Intent(MainActivity2.this, menu_puzzle.class));
             }
         });
 

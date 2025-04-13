@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="400dp"
+    android:layout_height="650dp"
+
+    android:padding="16dp"
+    android:gravity="center"
+    android:layout_gravity="center"
+    android:layout_centerInParent="true">
+
+    <!-- Imagen del toro sobresaliendo arriba -->
+    <ImageView
+        android:id="@+id/imagenToro"
+        android:layout_width="170dp"
+        android:layout_height="170dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-50dp"
+        android:layout_marginBottom="-16dp"
+        android:src="@drawable/treglas"
+        android:scaleType="fitCenter" />
+
+    <!-- Tarjeta con fondo gris claro, bordes redondeados y contorno negro -->
+    <LinearLayout
+        android:id="@+id/contenedorReglas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imagenToro"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical"
+        android:background="@drawable/fondo_reglas"
+        android:paddingTop="60dp"
+        android:paddingBottom="24dp"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
+        android:gravity="center_horizontal">
+
+        <!-- Título -->
+        <TextView
+            android:id="@+id/tituloReglas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="𝐑𝐞𝐠𝐥𝐚𝐬 𝐝𝐞𝐥 𝐉𝐮𝐞𝐠𝐨"
+            android:textColor="#0E2159"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:layout_marginTop="-10dp"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Reglas -->
+
+        <!-- CheckBox -->
+        <TextView
+            android:id="@+id/textoReglas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:lineSpacingExtra="6dp"
+            android:text="
+1) Posiciona el dispositivo en 180 grados\n
+2) Usa los movimientos del teléfono para mover las piezas:\n
+    ● Inclina hacia arriba, abajo, izquierda o derecha para mover una pieza.\n
+3) Solo se moverán las piezas junto a la casilla vacía.\n
+4) El tiempo comienza al cerrar esta ventana.
+"
+            android:textColor="#4D4D4D"
+            android:textSize="14sp" />
+        <ImageView
+            android:id="@+id/imagenPequena"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginBottom="16dp"
+            android:src="@drawable/puzzle_reglas_toribio_completo"
+            android:layout_gravity="center_horizontal"
+            android:scaleType="fitCenter" />
+        <CheckBox
+            android:id="@+id/checkNoMostrar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="𝗡𝗼 𝘃𝗼𝗹𝘃𝗲𝗿 𝗮 𝗺𝗼𝘀𝘁𝗿𝗮𝗿"
+            android:textColor="#4D4D4D"/>
+
+        <!-- Botón -->
+        <Button
+            android:id="@+id/cerrarButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="𝗖𝗲𝗿𝗿𝗮𝗿"
+            android:backgroundTint="#FEC526"
+            android:textColor="#0E2159"
+            android:textStyle="bold"/>
+    </LinearLayout>
+</RelativeLayout>
