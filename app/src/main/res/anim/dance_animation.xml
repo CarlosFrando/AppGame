@@ -1,0 +1,11 @@
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Rotación (inclinación de izquierda a derecha) -->
+    <rotate
+        android:duration="700"
+    android:fromDegrees="-12"
+    android:toDegrees="12"
+    android:pivotX="50%"
+    android:pivotY="100%"
+    android:repeatCount="infinite"
+    android:repeatMode="reverse"/>
+</set>

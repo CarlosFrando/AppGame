@@ -1,0 +1,118 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@drawable/fondo1">
+
+    <!-- Contenedor para el turno y nombres de los jugadores -->
+    <LinearLayout
+        android:id="@+id/turnoContainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Imagen del jugador 1 -->
+        <ImageView
+            android:id="@+id/imagenJugador1"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginEnd="8dp"
+            android:src="@drawable/jugador1" />
+
+        <!-- Nombre del jugador 1 -->
+        <TextView
+            android:id="@+id/nombreJugador1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:text="Jugador 1"
+            android:textColor="#1243A6"
+            android:textSize="18sp" />
+
+        <!-- Imagen del turno actual -->
+        <ImageView
+            android:id="@+id/imagenTurno"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/turno_icono" />
+
+        <!-- Nombre del jugador 2 -->
+        <TextView
+            android:id="@+id/nombreJugador2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:text="Jugador 2"
+            android:textColor="#1243A6"
+            android:textSize="18sp" />
+
+        <!-- Imagen del jugador 2 -->
+        <ImageView
+            android:id="@+id/imagenJugador2"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@drawable/jugador2" />
+    </LinearLayout>
+
+    <!-- Líneas decorativas -->
+    <View
+        android:id="@+id/line1"
+        android:layout_width="0dp"
+        android:layout_height="5dp"
+        android:background="#1243A6"
+        app:layout_constraintTop_toBottomOf="@id/turnoContainer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+    <View
+        android:id="@+id/line2"
+        android:layout_width="0dp"
+        android:layout_height="6dp"
+        android:background="#FEC526"
+        app:layout_constraintTop_toBottomOf="@id/line1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- GridLayout para las cartas -->
+    <GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="300dp"
+        android:layout_height="0dp"
+        android:columnCount="3"
+        android:rowCount="6"
+        android:alignmentMode="alignMargins"
+        android:columnOrderPreserved="false"
+        android:useDefaultMargins="true"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/line2"
+        app:layout_constraintBottom_toTopOf="@id/line3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+    </GridLayout>
+
+    <!-- Líneas decorativas -->
+    <View
+        android:id="@+id/line3"
+        android:layout_width="0dp"
+        android:layout_height="5dp"
+        android:background="#FEC526"
+        app:layout_constraintBottom_toTopOf="@id/line4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+    <View
+        android:id="@+id/line4"
+        android:layout_width="0dp"
+        android:layout_height="5dp"
+        android:background="#1243A6"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
