@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    android:background="@drawable/background40">
+
+    <!-- ImageView: ocupa el espacio restante gracias a su peso -->
+    <ImageView
+        android:id="@+id/hangmanImage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/ganaste_01"
+        android:scaleType="fitCenter"
+        android:contentDescription="Ahorcado"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/timePlayed"
+        app:layout_constraintVertical_weight="1"
+        app:layout_constraintVertical_chainStyle="spread" />
+
+    <!-- TextView: permanece en tamaño natural -->
+    <TextView
+        android:id="@+id/timePlayed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tiempo jugado: 00:00"
+        android:textSize="28sp"
+        android:textColor="#1E1E1E"
+        android:fontFamily="@font/titulo"
+        android:textStyle="bold"
+        android:background="@drawable/time_border"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="10dp"
+        app:layout_constraintTop_toBottomOf="@id/hangmanImage"
+        app:layout_constraintBottom_toTopOf="@+id/restartButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Button: permanece en tamaño natural -->
+    <Button
+        android:id="@+id/restartButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reiniciar Juego"
+        android:textSize="18sp"
+        android:padding="10dp"
+        android:backgroundTint="#1243A6"
+        android:textColor="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@id/timePlayed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

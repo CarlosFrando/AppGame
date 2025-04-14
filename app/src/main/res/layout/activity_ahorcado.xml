@@ -1,10 +1,67 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AhorcadoActivity">
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@drawable/background40"
+    android:gravity="center_horizontal">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reglas del Juego"
+        android:textSize="48sp"
+        android:textColor="#1243A6"
+        android:fontFamily="@font/titulo"
+        android:textAlignment="center"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="0dp" />
+
+    <ImageView
+        android:id="@+id/imageMono"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/reglas_03"
+        android:adjustViewBounds="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="0dp" />
+
+    <TextView
+        android:id="@+id/rulesText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textColor="#000000"
+        android:paddingHorizontal="32dp"
+        android:paddingVertical="20dp"
+        android:background="@drawable/border_oval"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:fontFamily="@font/title"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="24dp" />
+
+    <CheckBox
+        android:id="@+id/checkBoxNoMostrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No volver a mostrar"
+        android:textSize="16sp"
+        android:textColor="#000000"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="12dp" />
+
+    <Button
+        android:id="@+id/startGameButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Empezar Juego"
+        android:paddingHorizontal="32dp"
+        android:paddingVertical="12dp"
+        android:backgroundTint="#1243A6"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:layout_gravity="center_horizontal" />
+
+</LinearLayout>

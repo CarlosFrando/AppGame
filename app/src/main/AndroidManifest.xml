@@ -16,6 +16,15 @@
         android:theme="@style/Theme.AppCompat.Light.NoActionBar"
         tools:targetApi="31">
         <activity
+            android:name=".ActivityAhorcado_04"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityAhorcado_03"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityAhorcado_02"
+            android:exported="false" />
+        <activity
             android:name=".puzzle_3"
             android:exported="false" />
         <activity
