@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <network-security-config>
     <domain-config cleartextTrafficPermitted="true">
-        <domain includeSubdomains="true">127.0.0.1</domain>  <!-- IP local para emulador -->
+        <domain includeSubdomains="true">200.79.182.103</domain> //Para pruebas agrega en tu ip de tu PC y prende xampp
     </domain-config>
 </network-security-config>

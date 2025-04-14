@@ -36,7 +36,6 @@
             android:layout_marginBottom="30dp" />
 
 
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -51,6 +50,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Nombre completo"
+                    android:textColorHint="@color/rosaupt"
                     android:padding="12dp"
                     android:layout_marginBottom="8dp"
                     android:textColor="@color/black"/>
@@ -60,6 +60,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Edad"
+                    android:textColorHint="@color/rosaupt"
                     android:padding="12dp"
                     android:inputType="number"
                     android:layout_marginBottom="8dp"
@@ -69,6 +70,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Selecciona tu género:"
+                    android:textColor="@color/black"
                     android:textSize="12sp"/>
 
                 <RadioGroup
@@ -96,12 +98,14 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Selecciona tu escuela:"
+                    android:text="Selecciona tu escuela preparatoria:"
                     android:textSize="12sp"
+                    android:textColor="@color/black"
                     android:layout_marginTop="8dp"/>
 
                 <Spinner
                     android:id="@+id/spinnerEscuela"
+                    android:textColor="@color/rosaupt"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="20dp" />
@@ -109,7 +113,8 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Selecciona tu carrera:"
+                    android:text="Selecciona tu carrera de interes:"
+                    android:textColor="@color/black"
                     android:textSize="12sp"
                     android:layout_marginTop="8dp"/>
 
@@ -182,6 +187,13 @@
                         android:textColor="@color/black"
                         android:text="Ingeniería Financiera" />
 
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/check_psicologia"
+                        android:textColor="@color/black"
+                        android:text="Psicologia"/>
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -193,6 +205,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:hint="Otro"
+                        android:textColorHint="@color/rosaupt"
                         android:padding="12dp"
                         android:layout_marginBottom="8dp"
                         android:textColor="@color/black"/>
@@ -206,6 +219,7 @@
                     android:padding="12dp"
                     android:inputType="textEmailAddress"
                     android:layout_marginBottom="16dp"
+                    android:textColorHint="@color/rosaupt"
                     android:textColor="@color/black"/>
 
                 <EditText
@@ -213,6 +227,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Teléfono (10 dígitos)"
+                    android:textColorHint="@color/rosaupt"
                     android:padding="12dp"
                     android:inputType="phone"
                     android:maxLength="10"
