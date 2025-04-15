@@ -164,10 +164,10 @@ public class puzzle_3 extends AppCompatActivity implements SensorEventListener {
         float threshold = 3.0f;
 
         if (!moved) {
-            if (y < -threshold) mover(-4);
-            else if (y > threshold) mover(4);
-            else if (x > threshold) mover(-1);
-            else if (x < -threshold) mover(1);
+            if (y < -threshold) mover(4);
+            else if (y > threshold) mover(-4);
+            else if (x > threshold) mover(1);
+            else if (x < -threshold) mover(-1);
         }
 
         if (Math.abs(x) < 1 && Math.abs(y) < 1) {

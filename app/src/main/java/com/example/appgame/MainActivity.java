@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.os.StrictMode;
 import android.view.View;
 import android.widget.*;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.io.OutputStream;
@@ -27,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // Esto es para permitir red en el hilo principal (solo para pruebas)
+        // Permitir red en hilo principal (solo para pruebas)
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
         StrictMode.setThreadPolicy(policy);
 
@@ -61,15 +62,16 @@ public class MainActivity extends AppCompatActivity {
 
         btnEnviar.setOnClickListener(view -> {
             try {
-                String nombre = etNombre.getText().toString();
-                String edad = etEdad.getText().toString();
-                String correo = etCorreo.getText().toString();
-                String telefono = etTelefono.getText().toString();
-                String otro = etOtro.getText().toString();
+                // Obtener valores
+                String nombre = etNombre.getText().toString().trim();
+                String edad = etEdad.getText().toString().trim();
+                String correo = etCorreo.getText().toString().trim();
+                String telefono = etTelefono.getText().toString().trim();
+                String otro = etOtro.getText().toString().trim();
 
                 int selectedId = radioGroupGenero.getCheckedRadioButtonId();
                 RadioButton selectedRadioButton = findViewById(selectedId);
-                String genero = selectedRadioButton != null ? selectedRadioButton.getText().toString() : "No seleccionado";
+                String genero = selectedRadioButton != null ? selectedRadioButton.getText().toString() : "";
 
                 String escuela = spinnerEscuela.getSelectedItem().toString();
 
@@ -85,9 +87,30 @@ public class MainActivity extends AppCompatActivity {
                 if (checkFinanciera.isChecked()) carreras.add("Financiera");
                 if (!otro.isEmpty()) carreras.add(otro);
 
+                // VALIDACIONES
+                if (nombre.isEmpty() || edad.isEmpty() || correo.isEmpty() || telefono.isEmpty()) {
+                    Toast.makeText(this, "Por favor llena todos los campos obligatorios.", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+                if (selectedId == -1) {
+                    Toast.makeText(this, "Por favor selecciona un género.", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+                if (carreras.isEmpty()) {
+                    Toast.makeText(this, "Por favor selecciona al menos una carrera.", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+                if (escuela.equals("Selecciona tu escuela")) {
+                    Toast.makeText(this, "Por favor selecciona una escuela.", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+                // Envío de datos
                 String carrerasString = android.text.TextUtils.join(",", carreras);
 
-                // Datos para POST
                 String postData = "nombre=" + URLEncoder.encode(nombre, "UTF-8") +
                         "&edad=" + URLEncoder.encode(edad, "UTF-8") +
                         "&genero=" + URLEncoder.encode(genero, "UTF-8") +
@@ -96,7 +119,7 @@ public class MainActivity extends AppCompatActivity {
                         "&correo=" + URLEncoder.encode(correo, "UTF-8") +
                         "&telefono=" + URLEncoder.encode(telefono, "UTF-8");
 
-                URL url = new URL("http://200.79.182.103/registro.php"); // 10.0.2.2 = localhost desde emulador
+                URL url = new URL("http://200.79.182.103/registro.php");
                 HttpURLConnection conn = (HttpURLConnection) url.openConnection();
                 conn.setRequestMethod("POST");
                 conn.setDoOutput(true);
@@ -108,7 +131,10 @@ public class MainActivity extends AppCompatActivity {
 
                 int responseCode = conn.getResponseCode();
                 if (responseCode == HttpURLConnection.HTTP_OK) {
-                    Toast.makeText(MainActivity.this, "Datos enviados correctamente", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "Datos enviados", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(MainActivity.this, MainActivity2.class);
+                    startActivity(intent);
+                    finish();
                 } else {
                     Toast.makeText(MainActivity.this, "Error en el envío: " + responseCode, Toast.LENGTH_SHORT).show();
                 }
@@ -120,4 +146,3 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 }
-

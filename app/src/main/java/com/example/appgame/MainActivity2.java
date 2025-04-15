@@ -28,7 +28,7 @@ public class MainActivity2 extends AppCompatActivity {
         btnGato.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity2.this, GatoActivity.class));
+                startActivity(new Intent(MainActivity2.this, MainActivity5.class));
             }
         });
 

@@ -7,9 +7,36 @@
     <string name="previous">Previous</string>
 
     <string-array name="escuelas_array">
-        <item>Escuela 1</item>
-        <item>Escuela 2</item>
-        <item>Escuela 3</item>
+        <item>Selecciona tu escuela</item>
+        <item>Preparatoria No. 1</item>
+        <item>Preparatoria No. 2</item>
+        <item>CECyT 1 “Gonzalo Vázquez Vela”</item>
+        <item>CECyT 2 “Miguel Bernard”</item>
+        <item>CECyT 3 “Estanislao Ramírez Ruiz”</item>
+        <item>CECyT 4 “Lázaro Cárdenas”</item>
+        <item>CECyT 5 “Benito Juárez”</item>
+        <item>CECyT 6 “Miguel Othón de Mendizábal”</item>
+        <item>CECyT 7 “Cuauhtémoc”</item>
+        <item>CECyT 8 “Narciso Bassols”</item>
+        <item>CECyT 9 “Juan de Dios Bátiz”</item>
+        <item>CECyT 10 “Carlos Vallejo Márquez”</item>
+        <item>CECyT 11 “Wilfrido Massieu”</item>
+        <item>CECyT 12 “José María Morelos”</item>
+        <item>CECyT 13 “Ricardo Flores Magón”</item>
+        <item>CECyT 14 “Luis Enrique Erro”</item>
+        <item>CECyT 15 “Diódoro Antúnez Echegaray”</item>
+        <item>CECyT 16 “Hidalgo”</item>
+        <item>CECyT 17 “León, Guanajuato”</item>
+        <item>CECyT 18 “Zacatecas”</item>
+        <item>Centro de Estudios Tecnológicos (CETis) 1</item>
+        <item>CETis 2</item>
+        <item>CETis 3</item>
+        <item>CONALEP 1</item>
+        <item>CONALEP 2</item>
+        <item>Prepa UNAM Plantel 1 “Gabino Barreda”</item>
+        <item>Prepa UNAM Plantel 2 “Erasmo Castellanos Quinto”</item>
+        <item>Prepa UNAM Plantel 3 “Justo Sierra”</item>
+        <item>Prepa UNAM Plantel 4 “Vidal Castañeda y Nájera”</item>
     </string-array>
 
 
