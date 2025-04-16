@@ -2,66 +2,69 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="24dp"
+    android:padding="16dp"
     android:background="@drawable/background40"
-    android:gravity="center_horizontal">
+    android:gravity="center_horizontal"
+    android:baselineAligned="false">
 
     <TextView
         android:id="@+id/titleTextView"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:text="Reglas del Juego"
-        android:textSize="48sp"
+        android:textSize="45sp"
         android:textColor="#1243A6"
         android:fontFamily="@font/titulo"
         android:textAlignment="center"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="0dp" />
+        android:layout_gravity="center_horizontal" />
 
     <ImageView
         android:id="@+id/imageMono"
-        android:layout_width="220dp"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2.5"
         android:src="@drawable/reglas_03"
         android:adjustViewBounds="true"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="0dp" />
+        android:scaleType="fitCenter" />
 
     <TextView
         android:id="@+id/rulesText"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="20sp"
+        android:layout_height="0dp"
+        android:layout_weight="3.5"
+        android:text="Aquí van las reglas del juego..."
+        android:textSize="16sp"
         android:textColor="#000000"
-        android:paddingHorizontal="32dp"
-        android:paddingVertical="20dp"
+        android:padding="12dp"
         android:background="@drawable/border_oval"
         android:gravity="center"
         android:textAlignment="center"
-        android:fontFamily="@font/title"
-        android:layout_marginTop="0dp"
-        android:layout_marginBottom="24dp" />
+        android:fontFamily="@font/title" />
 
     <CheckBox
         android:id="@+id/checkBoxNoMostrar"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:text="No volver a mostrar"
-        android:textSize="16sp"
+        android:textSize="14sp"
         android:textColor="#000000"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="12dp" />
-
-    <Button
-        android:id="@+id/startGameButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Empezar Juego"
-        android:paddingHorizontal="32dp"
-        android:paddingVertical="12dp"
-        android:backgroundTint="#1243A6"
-        android:textColor="@android:color/white"
-        android:textSize="18sp"
         android:layout_gravity="center_horizontal" />
+
+    <ImageView
+        android:id="@+id/startGameButton"
+        android:layout_width="160dp"
+        android:layout_height="120dp"
+        android:src="@drawable/start"
+        android:contentDescription="Empezar Juego"
+        android:scaleType="fitCenter"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp" />
+
+
 
 </LinearLayout>

@@ -7,11 +7,11 @@
     android:padding="20dp"
     android:background="@drawable/background40">
 
-    <!-- ImageView: La imagen del juego -->
+    <!-- Imagen del ahorcado -->
     <ImageView
         android:id="@+id/hangmanImage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:src="@drawable/perdiste_01"
         android:scaleType="fitCenter"
         android:contentDescription="Ahorcado"
@@ -19,13 +19,14 @@
         app:layout_constraintBottom_toTopOf="@+id/timePlayed"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintVertical_chainStyle="packed" />
+        app:layout_constraintVertical_chainStyle="spread"
+        app:layout_constraintVertical_weight="5" />
 
-    <!-- TextView: Muestra el tiempo jugado -->
+    <!-- Texto de tiempo jugado -->
     <TextView
         android:id="@+id/timePlayed"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:text="Tiempo jugado: 00:00"
         android:textSize="28sp"
         android:textColor="#1E1E1E"
@@ -37,23 +38,23 @@
         app:layout_constraintTop_toBottomOf="@id/hangmanImage"
         app:layout_constraintBottom_toTopOf="@+id/restartButton"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_weight="1" />
 
-    <!-- Button: Reiniciar juego -->
-    <Button
+    <!-- Imagen de reinicio (como botón) -->
+    <ImageView
         android:id="@+id/restartButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Reiniciar Juego"
-        android:textSize="18sp"
-        android:padding="10dp"
-        android:backgroundTint="#1243A6"
-        android:textColor="@android:color/white"
+        android:layout_width="120dp"
+        android:layout_height="0dp"
+        android:src="@drawable/reset"
+        android:contentDescription="Reiniciar Juego"
+        android:scaleType="fitCenter"
+        android:clickable="true"
+        android:focusable="true"
         app:layout_constraintTop_toBottomOf="@id/timePlayed"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_weight="1.5" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

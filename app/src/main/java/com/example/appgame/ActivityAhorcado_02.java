@@ -6,9 +6,12 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
-import android.widget.GridLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.view.ViewGroup;
+import android.graphics.Typeface;
+import com.google.android.flexbox.FlexboxLayout;
+import com.google.android.flexbox.FlexboxLayout.LayoutParams;
 
 
 import android.widget.Toast;
@@ -27,8 +30,7 @@ public class ActivityAhorcado_02 extends AppCompatActivity {
     private int errors = 0;
     private int winCount = 0;
     private long startTime;
-    private GridLayout keyboardLayout;
-
+    private FlexboxLayout keyboardLayout;
     private MediaPlayer soundCorrect, soundWrong, soundWin, soundLose;
 
     private final String[][] palabras = {
@@ -117,25 +119,30 @@ public class ActivityAhorcado_02 extends AppCompatActivity {
     private void createKeyboard() {
         keyboardLayout.removeAllViews();
         String letters = "QWERTYUIOPASDFGHJKLÑZXCVBNM";
-        int buttonSize = 140;
-        int marginSize = 5;
+
+        int screenWidth = getResources().getDisplayMetrics().widthPixels;
+        int buttonSize = screenWidth / 9; // Ajuste ideal para 7–9 letras por fila
+        int margin = 6;
 
         for (char letter : letters.toCharArray()) {
             Button button = new Button(this);
             button.setText(String.valueOf(letter));
-            button.setTextSize(24);
-            button.setPadding(1, 1, 1, 1);
+            button.setTextSize(20f); // 🔠 Letra más grande
+            button.setTypeface(null, Typeface.BOLD); // 💪 Negritas
+            button.setPadding(0, 0, 0, 0);
 
-            GridLayout.LayoutParams params = new GridLayout.LayoutParams();
-            params.width = buttonSize;
-            params.height = buttonSize;
-            params.setMargins(marginSize, marginSize, marginSize, marginSize);
+            FlexboxLayout.LayoutParams params = new FlexboxLayout.LayoutParams(
+                    buttonSize,
+                    buttonSize
+            );
+            params.setMargins(margin, margin, margin, margin);
             button.setLayoutParams(params);
 
             button.setOnClickListener(v -> checkLetter(letter));
             keyboardLayout.addView(button);
         }
     }
+
 
     private void checkLetter(char letter) {
         boolean correct = false;

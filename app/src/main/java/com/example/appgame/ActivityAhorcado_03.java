@@ -3,6 +3,8 @@ package com.example.appgame;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,7 +14,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class ActivityAhorcado_03 extends AppCompatActivity {
 
     private TextView timePlayed;
-    private Button restartButton;
+    private ImageView restartButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

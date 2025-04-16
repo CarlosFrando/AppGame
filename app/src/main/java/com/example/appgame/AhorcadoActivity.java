@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -32,7 +33,7 @@ public class AhorcadoActivity extends AppCompatActivity {
 
         TextView rulesTextView = findViewById(R.id.rulesText);
         checkBoxNoMostrar = findViewById(R.id.checkBoxNoMostrar);
-        Button startGameButton = findViewById(R.id.startGameButton);
+        ImageView startGameButton = findViewById(R.id.startGameButton);
 
 
         rulesTextView.setText(
@@ -63,3 +64,4 @@ public class AhorcadoActivity extends AppCompatActivity {
         finish(); // Cierra esta actividad para que no regrese a las reglas
     }
 }
+

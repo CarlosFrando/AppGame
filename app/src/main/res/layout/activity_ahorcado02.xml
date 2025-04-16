@@ -1,74 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background41">
 
-
-
-
-    <TextView
-        android:id="@+id/titleTextView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="AHORCADO"
-        android:textSize="70sp"
-        android:textColor="#438BE0"
-        android:fontFamily="@font/titulo"
-        android:textAlignment="center"
-        android:layout_marginTop="40dp"/>
-
-
-
-    <!-- Contenido del juego -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:gravity="center"
-        android:padding="16dp">
+        android:padding="16dp"
+        android:gravity="center_horizontal"
+        android:baselineAligned="false">
+
+        <TextView
+            android:id="@+id/titleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1.3"
+            android:text="AHORCADO"
+            android:textSize="64sp"
+            android:textColor="#438BE0"
+            android:fontFamily="@font/titulo"
+            android:textAlignment="center" />
 
         <ImageView
             android:id="@+id/hangmanImage"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="40"
+            android:layout_weight="5.1"
             android:scaleType="fitCenter"
             android:src="@drawable/hangman_0"
-            android:contentDescription="Ahorcado"
-            android:layout_marginTop="120dp"/>
+            android:contentDescription="Ahorcado" />
 
         <TextView
             android:id="@+id/wordView"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
             android:text="_ _ _ _ _"
             android:textSize="28sp"
             android:textStyle="bold"
-            android:textColor="#000000"
-            android:layout_marginTop="20dp"/>
+            android:textColor="#000000" />
 
         <TextView
             android:id="@+id/clueView"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="0.7"
             android:text="Pista"
             android:textSize="20sp"
-            android:textColor="#666666"
-            android:layout_marginTop="10dp"/>
+            android:textColor="#666666" />
 
-        <GridLayout
+        <com.google.android.flexbox.FlexboxLayout
             android:id="@+id/keyboardLayout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:columnCount="7"
-            android:layout_marginTop="16dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginBottom="16dp"
-            android:padding="8dp"
-            />
-
+            android:layout_height="0dp"
+            android:layout_weight="3.5"
+            app:justifyContent="center"
+            app:alignItems="center"
+            app:flexWrap="wrap"
+            android:padding="8dp" />
 
     </LinearLayout>
 
