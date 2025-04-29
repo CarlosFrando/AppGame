@@ -7,6 +7,7 @@
     <string name="previous">Previous</string>
 
     <string-array name="escuelas_array">
+
         <item>Selecciona tu escuela</item>
         <item>CECyT 1 “Gonzalo Vázquez Vela”</item>
         <item>CECyT 2 “Miguel Bernard”</item>
@@ -31,35 +32,35 @@
         <item>CETis 3</item>
         <item>CONALEP 1</item>
         <item>CONALEP 2</item>
-        <item>Prepa UNAM Plantel 1 “Gabino Barreda”</item>
-        <item>Prepa UNAM Plantel 2 “Erasmo Castellanos Quinto”</item>
-        <item>Prepa UNAM Plantel 3 “Justo Sierra”</item>
-        <item>Prepa UNAM Plantel 4 “Vidal Castañeda y Nájera”</item>
+        <item>Prepa UNAM Plantel 1 </item>
+        <item>Prepa UNAM Plantel 2 </item>
+        <item>Prepa UNAM Plantel 3 </item>
+        <item>Prepa UNAM Plantel 4 </item>
         <item>TELEBACHILLERATO COMUNITARIO HERMOSILLO MONTE NOBLE</item>
         <item>COLEGIO DE ESTUDIOS CIENTIFICOS Y TECNOLOGICOS DEL ESTADO DE HIDALGO PLANTEL
 SANTIAGO DE ANAYA</item>
         <item>COLEGIO DE ESTUDIOS CIENTIFICOS Y TECNOLOGICOS DEL ESTADO DE HIDALGO PLANTEL
 SANTIAGO TULANTEPEC</item>
-        <item>CENTRO DE BACHILLERATO TECNOLOGICO INDUSTRIAL Y DE SERVICIOS NUM. 287</item>
-        <item>CENTRO DE BACHILLERATO TECNOLOGICO INDUSTRIAL Y DE SERVICIOS NUM. 5 HIDALGO</item>
-        <item>CENTRO DE BACHILLERATO TECNOLOGICO AGROPECUARIO NUM. 4 HIDALGO</item>
+        <item>BACHILLERATO NUM. 287</item>
+        <item>BACHILLERATO NUM. 5 HIDALGO</item>
+        <item>BACHILLERATO TECNOLOGICO AGROPECUARIO NUM. 4 </item>
         <item>COLEGIO DE BACHILLERES PLANTEL ZAPOTLAN HIDALGO</item>
-        <item>TELEBACHILLERATO COMUNITARIO NUEVA ESPERANZA HIDALGO</item>
-        <item>TELEBACHILLERATO COMUNITARIO TEPEPA</item>
+        <item>TELEBACHILLERATO NUEVA ESPERANZA HIDALGO</item>
+        <item>TELEBACHILLERATO TEPEPA</item>
         <item>CENTRO DE ATENCION DE ESTUDIANTES CON DISCAPACIDAD, CBTIS 083</item>
-        <item>CENTRO DE BACHILLERATO TECNOLOGICO AGROPECUARIO NUM. 179</item>
-        <item>CENTRO DE BACHILLERATO TECNOLOGICO AGROPECUARIO NUM. 152</item>
-        <item>CENTRO DE BACHILLERATO TECNOLOGICO INDUSTRIAL Y DE SERVICIOS NUM. 287</item>
-        <item>CENTRO DE BACHILLERATO TECNOLOGICO INDUSTRIAL Y DE SERVICIOS NUM. 218</item>
-        <item>CENTRO DE BACHILLERATO TECNOLOGICO INDUSTRIAL Y DE SERVICIOS NUM. 59</item>
-        <item>CENTRO DE BACHILLERATO TECNOLOGICO INDUSTRIAL Y DE SERVICIOS NUM. 59</item>
+        <item>BACHILLERATO TECNOLOGICO AGROPECUARIO NUM. 179</item>
+        <item>BACHILLERATO TECNOLOGICO AGROPECUARIO NUM. 152</item>
+        <item>BACHILLERATO NUM. 287</item>
+        <item>BACHILLERATO NUM. 218</item>
+        <item>BACHILLERATO NUM. 59</item>
+        <item>BACHILLERATO NUM. 59</item>
         <item>COLEGIO DE ESTUDIOS CIENTIFICOS Y TECNOLOGICOS DEL ESTADO DE HIDALGO PLANTEL
 TEPEAPULCO</item>
-        <item>COLEGIO DE ESTUDIOS CIENTIFICOS Y TECNOLOGICOS DEL ESTADO DE HIDALGO PLANTEL AGUA
+        <item>COLEGIO DE ESTUDIOS CIENTIFICOS Y TECNOLOGICOS PLANTEL AGUA
 BLANCA</item>
         <item>COLEGIO DE BACHILLERES PLANTEL ACATLAN</item>
-        <item>CENTRO DE ESTUDIOS TECNOLOGICOS INDUSTRIAL Y DE SERVICIOS NUM. 26</item>
-        <item>CENTRO DE BACHILLERATO TECNOLOGICO INDUSTRIAL Y DE SERVICIOS NUM. 179</item>
+        <item>CENTRO DE ESTUDIOS NUM. 26</item>
+        <item>BACHILLERATO NUM. 179</item>
         <item>CENTRO DE ATENCION DE ESTUDIANTES CON DISCAPACIDAD, CBTIS 179</item>
         <item>COLEGIO DE ESTUDIOS CIENTIFICOS Y TECNOLOGICOS DEL ESTADO DE HIDALGO PLANTEL
 TULANCINGO</item>
@@ -68,12 +69,12 @@ TULANCINGO</item>
         <item>BACHILLERATO GENERAL CORONEL NICOLAS ROMERO</item>
         <item>ESCUELA PREPARATORIA NUM. CUATRO</item>
         <item>ESCUELA PREPARATORIA NUM. TRES</item>
-        <item>ENTRO DE BACHILLERATO TECNOLOGICO INDUSTRIAL Y DE SERVICIOS NUM. 218</item>
-        <item>CENTRO DE BACHILLERATO TECNOLOGICO INDUSTRIAL Y DE SERVICIOS NUM. 287</item>
-        <item>CENTRO DE ATENCION DE ESTUDIANTES CON DISCAPACIDAD, CECATI 114</item>
-        <item>CENTRO DE BACHILLERATO TECNOLOGICO INDUSTRIAL Y DE SERVICIOS NUM. 222</item>
-        <item>CENTRO DE BACHILLERATO TECNOLOGICO AGROPECUARIO NUM. 29</item>
-        <item>CENTRO DE BACHILLERATO TECNOLOGICO INDUSTRIAL Y DE SERVICIOS NUM. 59</item>
+        <item>BACHILLERATO NUM. 218</item>
+        <item>BACHILLERATO NUM. 287</item>
+        <item>CECATI 114</item>
+        <item>BACHILLERATO NUM. 222</item>
+        <item>BACHILLERATO NUM. 29</item>
+        <item>BACHILLERATO NUM. 59</item>
                 <item>Selecciona tu escuela</item>
                 <item>Preparatoria No. 1</item>
                 <item>Preparatoria No. 2</item>
@@ -104,6 +105,7 @@ TULANCINGO</item>
                 <item>Prepa UNAM Plantel 2 “Erasmo Castellanos Quinto”</item>
                 <item>Prepa UNAM Plantel 3 “Justo Sierra”</item>
                 <item>Prepa UNAM Plantel 4 “Vidal Castañeda y Nájera”</item>
+
 
 
     </string-array>
