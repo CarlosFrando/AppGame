@@ -1,6 +1,7 @@
 package com.example.appgame;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.StrictMode;
 import android.view.View;
@@ -23,9 +24,24 @@ public class MainActivity extends AppCompatActivity {
             checkTecnologias, checkElectronica, checkGestionEm, checkNegocios, checkFinanciera;
     Button btnEnviar;
 
+    SharedPreferences preferences; // <<<<<< AGREGADO
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        // Verificar si los datos ya están guardados
+        preferences = getSharedPreferences("prefs", MODE_PRIVATE);
+        String nombrecompleto = preferences.getString("nombre", null); // Si es null, es que no se ha registrado
+
+        // Si ya se ha registrado, redirigir al menú de juegos
+        if (nombrecompleto != null) {
+            Intent intent = new Intent(MainActivity.this, MainActivity2.class);
+            startActivity(intent);
+            finish();
+            return; // Salir de la actividad de registro
+        }
+
         setContentView(R.layout.activity_main);
 
         // Permitir red en hilo principal (solo para pruebas)
@@ -54,11 +70,14 @@ public class MainActivity extends AppCompatActivity {
 
         btnEnviar = findViewById(R.id.btnEnviar);
 
-        // Spinner de ejemplo
+        // Spinner
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                 R.array.escuelas_array, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerEscuela.setAdapter(adapter);
+
+        // Verificar SharedPreferences
+        preferences = getSharedPreferences("prefs", MODE_PRIVATE);
 
         btnEnviar.setOnClickListener(view -> {
             try {
@@ -108,6 +127,18 @@ public class MainActivity extends AppCompatActivity {
                     return;
                 }
 
+                // Guardar datos en SharedPreferences
+                SharedPreferences.Editor editor = preferences.edit();
+                editor.putString("nombre", nombre);
+                editor.putString("edad", edad);
+                editor.putString("correo", correo);
+                editor.putString("telefono", telefono);
+                editor.putString("genero", genero);
+                editor.putString("escuela", escuela);
+                editor.putString("carreras", android.text.TextUtils.join(",", carreras));
+                editor.apply();
+
+
                 // Envío de datos
                 String carrerasString = android.text.TextUtils.join(",", carreras);
 
@@ -132,6 +163,8 @@ public class MainActivity extends AppCompatActivity {
                 int responseCode = conn.getResponseCode();
                 if (responseCode == HttpURLConnection.HTTP_OK) {
                     Toast.makeText(MainActivity.this, "Datos enviados", Toast.LENGTH_SHORT).show();
+
+                    // Enviar a la pantalla de juegos
                     Intent intent = new Intent(MainActivity.this, MainActivity2.class);
                     startActivity(intent);
                     finish();
