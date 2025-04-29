@@ -3,38 +3,38 @@
     android:layout_height="match_parent"
     android:background="@drawable/fondoregistro"
     android:padding="16dp">
-
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <LinearLayout
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <View
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="center_horizontal">
+            android:layout_height="10dp"
+            android:background="#1243A6" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="12dp"
+            android:background="#FEC526"
+            android:layout_marginBottom="20dp" />
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="10dp"
-                android:background="#1243A6" />
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="12dp"
-                android:background="#FEC526"
-                android:layout_marginBottom="20dp" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="180dp"
+            android:src="@drawable/registro"
+            android:layout_marginBottom="20dp" />
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="180dp"
-                android:src="@drawable/registro"
-                android:layout_marginBottom="20dp" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="12dp"
+            android:background="#0E2159"
+            android:layout_marginBottom="30dp" />
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="12dp"
-                android:background="#0E2159"
-                android:layout_marginBottom="30dp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -53,8 +53,7 @@
                     android:textColorHint="@color/rosaupt"
                     android:padding="12dp"
                     android:layout_marginBottom="8dp"
-                    android:textColor="@color/black"
-                    android:fontFamily="@font/montserrat_regular" />
+                    android:textColor="@color/black"/>
 
                 <EditText
                     android:id="@+id/etEdad"
@@ -65,16 +64,14 @@
                     android:padding="12dp"
                     android:inputType="number"
                     android:layout_marginBottom="8dp"
-                    android:textColor="@color/black"
-                    android:fontFamily="@font/montserrat_regular" />
+                    android:textColor="@color/black"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Selecciona tu género:"
                     android:textColor="@color/black"
-                    android:textSize="12sp"
-                    android:fontFamily="@font/montserrat_regular" />
+                    android:textSize="12sp"/>
 
                 <RadioGroup
                     android:id="@+id/radioGroupGenero"
@@ -88,16 +85,14 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/black"
-                        android:text="Masculino"
-                        android:fontFamily="@font/montserrat_regular" />
+                        android:text="Masculino" />
 
                     <RadioButton
                         android:id="@+id/radio_femenino"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/black"
-                        android:text="Femenino"
-                        android:fontFamily="@font/montserrat_regular" />
+                        android:text="Femenino" />
                 </RadioGroup>
 
                 <TextView
@@ -106,14 +101,18 @@
                     android:text="Selecciona tu escuela preparatoria:"
                     android:textSize="12sp"
                     android:textColor="@color/black"
-                    android:layout_marginTop="8dp"
-                    android:fontFamily="@font/montserrat_regular" />
+                    android:layout_marginTop="8dp"/>
 
-                <Spinner
+                <AutoCompleteTextView
                     android:id="@+id/spinnerEscuela"
-                    android:textColor="@color/rosaupt"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:hint="Escribe o selecciona tu escuela"
+                    android:padding="12dp"
+                    android:textColorHint="@color/rosaupt"
+                    android:textColor="@color/black"
+                    android:dropDownHeight="200dp"
+                    android:completionThreshold="1"
                     android:layout_marginBottom="20dp" />
 
                 <TextView
@@ -122,8 +121,7 @@
                     android:text="Selecciona tu carrera de interes:"
                     android:textColor="@color/black"
                     android:textSize="12sp"
-                    android:layout_marginTop="8dp"
-                    android:fontFamily="@font/montserrat_regular" />
+                    android:layout_marginTop="8dp"/>
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -136,87 +134,76 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/black"
-                        android:text="Ingeniería en Sistemas Computacionales"
-                        android:fontFamily="@font/montserrat_regular" />
+                        android:text="Ingeniería en Sistemas Computacionales" />
 
                     <CheckBox
                         android:id="@+id/check_civil"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/black"
-                        android:text="Ingeniería Civil"
-                        android:fontFamily="@font/montserrat_regular" />
+                        android:text="Ingeniería Civil" />
 
                     <CheckBox
                         android:id="@+id/check_industrial"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/black"
-                        android:text="Ingeniería Industrial"
-                        android:fontFamily="@font/montserrat_regular" />
+                        android:text="Ingeniería Industrial" />
 
                     <CheckBox
                         android:id="@+id/check_robotica"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/black"
-                        android:text="Ingeniería Robótica"
-                        android:fontFamily="@font/montserrat_regular" />
+                        android:text="Ingeniería Robótica" />
 
                     <CheckBox
                         android:id="@+id/check_tecnologias"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/black"
-                        android:text="Ingeniería en Tecnologías y Manufactura"
-                        android:fontFamily="@font/montserrat_regular" />
+                        android:text="Ingeniería en Tecnologías y Manufactura" />
 
                     <CheckBox
                         android:id="@+id/check_electronica"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/black"
-                        android:text="Ingeniería en Electrónica y Telecomunicaciones"
-                        android:fontFamily="@font/montserrat_regular" />
+                        android:text="Ingeniería en Electrónica y Telecomunicaciones" />
 
                     <CheckBox
                         android:id="@+id/check_gestionEm"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/black"
-                        android:text="Licenciatura en Gestión Empresarial"
-                        android:fontFamily="@font/montserrat_regular" />
+                        android:text="Licenciatura en Gestión Empresarial" />
 
                     <CheckBox
                         android:id="@+id/check_negocios"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/black"
-                        android:text="Licenciatura en Negocios Internacionales"
-                        android:fontFamily="@font/montserrat_regular" />
+                        android:text="Licenciatura en Negocios Internacionales" />
 
                     <CheckBox
                         android:id="@+id/check_financiera"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/black"
-                        android:text="Ingeniería Financiera"
-                        android:fontFamily="@font/montserrat_regular" />
+                        android:text="Ingeniería Financiera" />
 
                     <CheckBox
-                        android:id="@+id/check_psicologia"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:id="@+id/check_psicologia"
                         android:textColor="@color/black"
-                        android:text="Psicología"
-                        android:fontFamily="@font/montserrat_regular" />
+                        android:text="Psicologia"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Selecciona otras opciones:"
-                        android:textSize="12sp"
-                        android:fontFamily="@font/montserrat_regular" />
+                        android:textSize="12sp" />
 
                     <EditText
                         android:id="@+id/etOtro"
@@ -226,8 +213,7 @@
                         android:textColorHint="@color/rosaupt"
                         android:padding="12dp"
                         android:layout_marginBottom="8dp"
-                        android:textColor="@color/black"
-                        android:fontFamily="@font/montserrat_regular" />
+                        android:textColor="@color/black"/>
                 </LinearLayout>
 
                 <EditText
@@ -239,8 +225,7 @@
                     android:inputType="textEmailAddress"
                     android:layout_marginBottom="16dp"
                     android:textColorHint="@color/rosaupt"
-                    android:textColor="@color/black"
-                    android:fontFamily="@font/montserrat_regular" />
+                    android:textColor="@color/black"/>
 
                 <EditText
                     android:id="@+id/etTelefono"
@@ -252,8 +237,7 @@
                     android:inputType="phone"
                     android:maxLength="10"
                     android:layout_marginBottom="16dp"
-                    android:textColor="@color/black"
-                    android:fontFamily="@font/montserrat_regular" />
+                    android:textColor="@color/black"/>
 
                 <Button
                     android:id="@+id/btnEnviar"
@@ -263,22 +247,20 @@
                     android:textSize="20dp"
                     android:textColor="#f2f2f2"
                     android:backgroundTint="@color/rosaupt"
-                    android:padding="12dp"
-                    android:fontFamily="@font/montserrat_regular" />
+                    android:padding="12dp"/>
 
             </LinearLayout>
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="10dp"
-                android:background="#FEC526"/>
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="10dp"
-                android:background="#1243A6" />
 
-        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="#FEC526"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="#1243A6" />
 
+    </LinearLayout>
     </ScrollView>
-
 </RelativeLayout>
