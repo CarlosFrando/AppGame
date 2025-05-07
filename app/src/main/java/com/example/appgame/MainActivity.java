@@ -2,6 +2,7 @@ package com.example.appgame;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
@@ -25,9 +26,21 @@ public class MainActivity extends AppCompatActivity {
             checkTecnologias, checkElectronica, checkGestionEm, checkNegocios, checkFinanciera;
     Button btnEnviar;
 
+    SharedPreferences preferences;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        preferences = getSharedPreferences("prefs", MODE_PRIVATE);
+        String nombrecompleto = preferences.getString("nombre", null);
+        if(nombrecompleto != null){
+            Intent intent = new Intent(MainActivity.this, MainActivity2.class);
+            startActivity(intent);
+            finish();
+            return; // Salir de la actividad de registro
+        }
+
         setContentView(R.layout.activity_main);
 
         // Asignar vistas
@@ -118,6 +131,15 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(this, "Por favor selecciona una escuela.", Toast.LENGTH_SHORT).show();
             return;
         }
+        SharedPreferences.Editor editor = preferences.edit();
+        editor.putString("nombre", nombre);
+        editor.putString("edad", edad);
+        editor.putString("correo", correo);
+        editor.putString("telefono", telefono);
+        editor.putString("genero", genero);
+        editor.putString("escuela", escuela);
+        editor.putString("carreras", android.text.TextUtils.join(",", carreras));
+        editor.apply();
 
         // Si todo está bien, enviar los datos en un hilo nuevo
         new Thread(() -> {
