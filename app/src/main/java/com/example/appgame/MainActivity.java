@@ -22,8 +22,10 @@ public class MainActivity extends AppCompatActivity {
     EditText etNombre, etEdad, etCorreo, etTelefono, etOtro;
     RadioGroup radioGroupGenero;
     AutoCompleteTextView autoCompleteEscuela;
-    CheckBox checkSistemas, checkCivil, checkIndustrial, checkRobotica,
-            checkTecnologias, checkElectronica, checkGestionEm, checkNegocios, checkFinanciera;
+    CheckBox check_mecanica, check_civil, check_manufactura, check_industrial,
+            check_sistemas_electricos, check_ti, check_arquitectura,
+            check_negocios, check_financiera, check_comercio, check_administracion, check_psicologia;
+
     Button btnEnviar;
 
     SharedPreferences preferences;
@@ -53,15 +55,18 @@ public class MainActivity extends AppCompatActivity {
         radioGroupGenero = findViewById(R.id.radioGroupGenero);
         autoCompleteEscuela = findViewById(R.id.spinnerEscuela);
 
-        checkSistemas = findViewById(R.id.check_sistemas);
-        checkCivil = findViewById(R.id.check_civil);
-        checkIndustrial = findViewById(R.id.check_industrial);
-        checkRobotica = findViewById(R.id.check_robotica);
-        checkTecnologias = findViewById(R.id.check_tecnologias);
-        checkElectronica = findViewById(R.id.check_electronica);
-        checkGestionEm = findViewById(R.id.check_gestionEm);
-        checkNegocios = findViewById(R.id.check_negocios);
-        checkFinanciera = findViewById(R.id.check_financiera);
+        check_mecanica = findViewById(R.id.check_mecanica);
+        check_civil = findViewById(R.id.check_civil);
+        check_manufactura = findViewById(R.id.check_manufactura);
+        check_industrial = findViewById(R.id.check_industrial);
+        check_sistemas_electricos = findViewById(R.id.check_sistemas_electricos);
+        check_ti = findViewById(R.id.check_ti);
+        check_arquitectura = findViewById(R.id.check_arquitectura);
+        check_negocios = findViewById(R.id.check_negocios);
+        check_financiera = findViewById(R.id.check_financiera);
+        check_comercio = findViewById(R.id.check_comercio);
+        check_administracion = findViewById(R.id.check_administracion);
+        check_psicologia = findViewById(R.id.check_psicologia);
 
         btnEnviar = findViewById(R.id.btnEnviar);
 
@@ -100,15 +105,18 @@ public class MainActivity extends AppCompatActivity {
         String escuela = autoCompleteEscuela.getText().toString().trim();
 
         ArrayList<String> carreras = new ArrayList<>();
-        if (checkSistemas.isChecked()) carreras.add("Sistemas");
-        if (checkCivil.isChecked()) carreras.add("Civil");
-        if (checkIndustrial.isChecked()) carreras.add("Industrial");
-        if (checkRobotica.isChecked()) carreras.add("Robótica");
-        if (checkTecnologias.isChecked()) carreras.add("Tecnologías");
-        if (checkElectronica.isChecked()) carreras.add("Electrónica");
-        if (checkGestionEm.isChecked()) carreras.add("Gestión Empresarial");
-        if (checkNegocios.isChecked()) carreras.add("Negocios");
-        if (checkFinanciera.isChecked()) carreras.add("Financiera");
+        if (check_mecanica.isChecked()) carreras.add("Mecánica, ");
+        if (check_civil.isChecked()) carreras.add("Civil, ");
+        if (check_manufactura.isChecked()) carreras.add("Manufactura Avanzada, ");
+        if (check_industrial.isChecked()) carreras.add("Industrial, ");
+        if (check_sistemas_electricos.isChecked()) carreras.add("Sistemas Eléctricos, ");
+        if (check_ti.isChecked()) carreras.add("TI, ");
+        if (check_arquitectura.isChecked()) carreras.add("Arquitectura, ");
+        if (check_negocios.isChecked()) carreras.add("Negocios, ");
+        if (check_financiera.isChecked()) carreras.add("Financiera, ");
+        if (check_comercio.isChecked()) carreras.add("Comercio, ");
+        if (check_administracion.isChecked()) carreras.add("Administración, ");
+        if (check_psicologia.isChecked()) carreras.add("Psicología, ");
         if (!otro.isEmpty()) carreras.add(otro);
 
         // Validaciones

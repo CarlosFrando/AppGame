@@ -120,7 +120,7 @@
                     android:layout_height="wrap_content"
                     android:text="Selecciona tu carrera de interes:"
                     android:textColor="@color/black"
-                    android:textSize="12sp"
+                    android:textSize="16sp"
                     android:layout_marginTop="8dp"/>
 
                 <LinearLayout
@@ -129,61 +129,76 @@
                     android:orientation="vertical"
                     android:layout_gravity="center_vertical">
 
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Ingenierías"
+                        android:layout_marginTop="15sp"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"/>
+
                     <CheckBox
-                        android:id="@+id/check_sistemas"
+                        android:id="@+id/check_mecanica"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/black"
-                        android:text="Ingeniería en Sistemas Computacionales" />
+                        android:text="Mecánica" />
 
                     <CheckBox
                         android:id="@+id/check_civil"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/black"
-                        android:text="Ingeniería Civil" />
+                        android:text="Civil" />
+
+                    <CheckBox
+                        android:id="@+id/check_manufactura"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:text="Manufactura Avanzada" />
 
                     <CheckBox
                         android:id="@+id/check_industrial"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/black"
-                        android:text="Ingeniería Industrial" />
+                        android:text="Industrial" />
 
                     <CheckBox
-                        android:id="@+id/check_robotica"
+                        android:id="@+id/check_sistemas_electricos"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/black"
-                        android:text="Ingeniería Robótica" />
+                        android:text="Sistemas Eléctricos" />
 
                     <CheckBox
-                        android:id="@+id/check_tecnologias"
+                        android:id="@+id/check_ti"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/black"
-                        android:text="Ingeniería en Tecnologías y Manufactura" />
+                        android:text="Tecnologías de la Información e Innovación Digital" />
 
                     <CheckBox
-                        android:id="@+id/check_electronica"
+                        android:id="@+id/check_arquitectura"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/black"
-                        android:text="Ingeniería en Electrónica y Telecomunicaciones" />
+                        android:text="Arquitectura" />
 
-                    <CheckBox
-                        android:id="@+id/check_gestionEm"
-                        android:layout_width="wrap_content"
+                    <TextView
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:text="Licenciaturas"
                         android:textColor="@color/black"
-                        android:text="Licenciatura en Gestión Empresarial" />
+                        android:textSize="12sp"/>
 
                     <CheckBox
                         android:id="@+id/check_negocios"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/black"
-                        android:text="Licenciatura en Negocios Internacionales" />
+                        android:text="Negocios y Mercadotecnia" />
 
                     <CheckBox
                         android:id="@+id/check_financiera"
@@ -193,12 +208,27 @@
                         android:text="Ingeniería Financiera" />
 
                     <CheckBox
+                        android:id="@+id/check_comercio"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/check_psicologia"
                         android:textColor="@color/black"
-                        android:text="Psicologia"/>
+                        android:text="Comercio Internacional y Aduanas" />
 
+                    <CheckBox
+                        android:id="@+id/check_administracion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:text="Administración" />
+
+                    <CheckBox
+                        android:id="@+id/check_psicologia"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:text="Psicología" />
+
+                    <!-- Otro -->
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -215,6 +245,7 @@
                         android:layout_marginBottom="8dp"
                         android:textColor="@color/black"/>
                 </LinearLayout>
+
 
                 <EditText
                     android:id="@+id/etCorreo"
